@@ -27,11 +27,4 @@ router.get("/do-logs/:arv", (req: Request, res: Response) => {
     res.send();
 });
 
-router.get("/random/:min/:max", (req: Request, res: Response) => {
-    const min = Number(req.params.min);
-    const max = Number(req.params.max);
-    const randomNum = Math.floor(Math.random() * (max - min + 1) + min);
-    res.send(randomNum.toString());
-});
-
 export default router;
